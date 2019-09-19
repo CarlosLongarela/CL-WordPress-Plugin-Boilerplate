@@ -38,11 +38,21 @@ if ( ! defined( 'WPINC' ) ) {
 define( 'PLUGIN_NAME_VERSION', '1.0.0' );
 
 /**
+ * Plugin PATH with trailing slash like /path/to/wordpres/wp-content/plugins/plugin-name/ !
+ */
+define( 'PLUGIN_NAME_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
+
+/**
+ * Plugin URL with trailing slash like http://example.com/wp-content/plugins/plugin-name/ !
+ */
+define( 'PLUGIN_NAME_PLUGIN_URL', plugin_dir_url( __FILE__ ) ); // plugin URL.
+
+/**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-plugin-name-activator.php
  */
 function activate_plugin_name() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name-activator.php';
+	require_once PLUGIN_NAME_PLUGIN_PATH . 'includes/class-plugin-name-activator.php';
 	Plugin_Name_Activator::activate();
 }
 
@@ -51,7 +61,7 @@ function activate_plugin_name() {
  * This action is documented in includes/class-plugin-name-deactivator.php
  */
 function deactivate_plugin_name() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name-deactivator.php';
+	require_once PLUGIN_NAME_PLUGIN_PATH . 'includes/class-plugin-name-deactivator.php';
 	Plugin_Name_Deactivator::deactivate();
 }
 
@@ -62,7 +72,7 @@ register_deactivation_hook( __FILE__, 'deactivate_plugin_name' );
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name.php';
+require PLUGIN_NAME_PLUGIN_PATH . 'includes/class-plugin-name.php';
 
 /**
  * Begins execution of the plugin.
