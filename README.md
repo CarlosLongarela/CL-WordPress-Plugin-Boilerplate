@@ -1,4 +1,4 @@
-# WordPress Plugin Boilerplate (CL Version)
+# CL WordPress Plugin Boilerplate
 
 A standardized, organized, object-oriented foundation for building high-quality WordPress Plugins.
 Customized by [Carlos Longarela](https://tabernawp.com/) with strict [WordPress Coding Standards](http://codex.wordpress.org/WordPress_Coding_Standards) and configuration files for:
