@@ -1,6 +1,12 @@
-# WordPress Plugin Boilerplate
+# WordPress Plugin Boilerplate (CL Version)
 
 A standardized, organized, object-oriented foundation for building high-quality WordPress Plugins.
+Customized by [Carlos Longarela](https://tabernawp.com/) with strict [Coding Standards](http://codex.wordpress.org/WordPress_Coding_Standards) and configuration files for:
+* [Gulp](https://gulpjs.com/) for compress SCSS files, minimize and autoprefix. Also copile TypeScript and minimize result file.
+* [TypeScript](https://www.typescriptlang.org/) with `tsconfig.json`
+* [EditorConfig](https://editorconfig.org/)
+* [ESLint](https://eslint.org/)
+* [Package](https://docs.npmjs.com/files/package.json) info
 
 ## Contents
 

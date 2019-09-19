@@ -26,9 +26,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CarlosLongarela/cl-woo-dorset-waivers"
+    "url": "git+http://example.com/plugin-name-uri/"
   },
-  "author": "Carlos Longarela",
-  "license": "ISC",
-  "homepage": "https://tabernawp.com/"
+  "author": "Your Name or Your Company",
+  "license": "GPL-2.0-or-later",
+  "homepage": "http://example.com/"
 }

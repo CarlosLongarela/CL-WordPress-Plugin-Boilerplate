@@ -40,6 +40,15 @@ class Plugin_Name_Public {
 	private $version;
 
 	/**
+	 * The version to add to resource files.
+	 *
+	 * @since    1.0.0
+	 * @access   private
+	 * @var      string    $resource_version    The version to add to resource files.
+	 */
+	private $resource_version;
+
+	/**
 	 * Initialize the class and set its properties.
 	 *
 	 * @since    1.0.0
@@ -49,6 +58,12 @@ class Plugin_Name_Public {
 	public function __construct( $plugin_name, $version ) {
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
+
+		if ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) {
+			$this->resource_version = microtime( true );
+		} else {
+			$this->resource_version = null;
+		}
 	}
 
 	/**
@@ -57,7 +72,7 @@ class Plugin_Name_Public {
 	 * @since    1.0.0
 	 */
 	public function enqueue_styles() {
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/plugin-name-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/plugin-name-public.min.css', array(), $this->resource_version, 'all' );
 	}
 
 	/**
@@ -66,7 +81,7 @@ class Plugin_Name_Public {
 	 * @since    1.0.0
 	 */
 	public function enqueue_scripts() {
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/plugin-name-public.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/plugin-name-public.min.js', array(), $this->resource_version, true );
 	}
 
 }
