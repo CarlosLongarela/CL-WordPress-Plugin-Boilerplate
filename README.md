@@ -26,6 +26,8 @@ The WordPress Plugin Boilerplate includes the following files:
 
 ## Installation
 
+You should generate your personalized folder structure with your data from [CL WordPress Plugin Boilerplate Generator](https://tabernawp.com/cl-wordpress-plugin-boilerplate-generator) ***UNDER CONSTRUCTION !!!***
+
 The Boilerplate can be installed directly into your plugins folder "as-is". You will want to rename it and the classes inside of it to fit your needs. For example, if your plugin is named 'example-me' then:
 
 * rename files from `plugin-name` to `example-me`
@@ -90,7 +92,7 @@ The previous version of the WordPress Plugin Boilerplate included support for a 
 
 These tools are not part of the core of this Boilerplate, as I see them as being additions, forks, or other contributions to the Boilerplate.
 
-The same is true of using tools like Grunt, Composer, etc. These are all fantastic tools, but not everyone uses them. In order to  keep the core Boilerplate as light as possible, these features have been removed and will be introduced in other editions, and will be listed and maintained on the project homepage.
+The same is true of using tools like Grunt, Composer, etc. These are all fantastic tools, but not everyone uses them. In order to keep the core Boilerplate as light as possible, these features have been removed and will be introduced in other editions, and will be listed and maintained on the project homepage.
 
 # Credits
 
