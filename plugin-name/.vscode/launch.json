@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Listen XDebug fpm",
+            "type": "php",
+            "request": "launch",
+            // server -> local
+            "pathMappings": {
+              "/app/public": "D:\\Our\\path-to\\app\\public",
+              "/app/public/wp-content/plugins/plugin-name": "${workspaceFolder}"
+            },
+            "port": 9000,
+            "xdebugSettings":{
+              "max_children": 64,
+              "max_depth": 4
+            }
+        }
+    ]
+}
